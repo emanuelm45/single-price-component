@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(229, 239, 245);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 5rem 0;
+  display: grid;
+  width: min(45rem, 80%);
+}
+.container .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+  line-height: 1.8;
+}
+.container .card--1 {
+  color: rgb(42, 178, 175);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.container .card--1 span.yellow {
+  margin: 1rem 0;
+  color: rgb(192, 223, 52);
+  font-weight: 700;
+}
+.container .card--2 {
+  color: rgb(255, 255, 255);
+  background-color: rgb(42, 178, 175);
+}
+.container .card--2 p.price {
+  margin-top: 1rem;
+}
+.container .card--2 p.price strong {
+  font-size: 2rem;
+  margin-right: 0.6rem;
+}
+.container .card--2 p.price small {
+  vertical-align: super;
+  color: rgb(229, 239, 245);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.container .card--2 .btn-sign-up {
+  margin-top: 2rem;
+  border-radius: 0.4rem;
+  font-size: inherit;
+  padding: 1.1rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(192, 223, 52);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+.container .card--2 .btn-sign-up:hover {
+  color: rgb(42, 178, 175);
+  background-color: rgb(217, 243, 103);
+}
+.container .card--3 {
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  background-color: rgb(152, 166, 189);
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 2fr 2fr;
+  }
+  .container .card--1 {
+    grid-column: span 2;
+  }
+  .container .card--2 {
+    border-radius: 0 0 0 0.4rem;
+  }
+  .container .card--3 {
+    border-radius: 0 0 0.4rem 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

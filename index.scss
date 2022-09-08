@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+
+$color-black-muted: rgba(0,0,0,.3);
+$color-cyan: rgb(42, 178, 175);
+$color-bright-yellow: rgb(192, 223, 52);
+$color-very-bright-yellow: rgb(217, 243, 103);
+$color-light-gray: rgb(229, 239, 245);
+$color-grayish-blue: rgb(152, 166, 189);
+$color-white: rgb(255, 255, 255);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: $color-light-gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin: 5rem 0;
+    display: grid;
+    width: min(45rem, 80%);
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 1.8rem;
+        line-height: 1.8;
+    }
+
+    .card--1 {
+        color: $color-cyan;
+        background-color: $color-white;
+        border-radius: .4rem .4rem 0 0;
+        
+        span.yellow {
+            margin: 1rem 0;
+            color: $color-bright-yellow;
+            font-weight: 700;
+        }
+    }
+
+    .card--2 {
+        color: $color-white;
+        background-color: $color-cyan;
+
+        p.price {
+            margin-top: 1rem;
+            strong {
+                font-size: 2rem;
+                margin-right: .6rem;
+            }
+            
+            small {
+                vertical-align: super;
+                color: $color-light-gray;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+
+        .btn-sign-up {
+            margin-top: 2rem;
+            border-radius: .4rem;
+            font-size: inherit;
+            padding: 1.1rem;
+            color: $color-white;
+            background-color: $color-bright-yellow;
+            box-shadow: 1px 1px 15px $color-black-muted;
+            cursor: pointer;
+            transition: color .3s, background-color .3s;
+
+            &:hover {
+                color: $color-cyan;
+                background-color: $color-very-bright-yellow;
+            }
+        }
+    }
+
+    .card--3 {
+        font-weight: 300;
+        color: $color-white;
+        background-color: $color-grayish-blue;
+        border-radius: 0 0 .4rem .4rem;
+    }
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 2fr 2fr;
+
+        .card--1 {
+            grid-column: span 2;
+        }
+
+        .card--2 {
+            border-radius: 0 0 0 .4rem;
+        }
+
+        .card--3 {
+            border-radius: 0 0 .4rem 0;
+        }
+    }
+}
